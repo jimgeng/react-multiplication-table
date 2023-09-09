@@ -20,7 +20,7 @@ export default function History({ history }: { history: Set<string> }) {
     }
   });
   return (
-    <ul className="h-5/6 overflow-y-scroll">
+    <ul className="overflow-y-scroll">
       {historyArray.map((operation) => {
         return (
           <li>
