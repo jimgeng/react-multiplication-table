@@ -24,11 +24,9 @@ function App() {
   }
 
   return (
-    <main className="grid h-screen auto-rows-fr gap-4 bg-white p-4 dark:bg-gray-800 lg:grid-cols-2 lg:grid-rows-1">
-      <div className="overflow-auto">
-        <Table size={tableSize} addToOperationHistory={addToOperationHistory} />
-      </div>
-      <div className="mt-4 flex flex-col lg:mt-0">
+    <main className="flex justify-between flex-col h-screen gap-[5%] bg-gray-200 p-4 dark:bg-gray-800 lg:flex-row">
+      <Table size={tableSize} addToOperationHistory={addToOperationHistory} />
+      <div className="h-[45%] lg:h-full flex-grow mt-4 flex flex-col lg:mt-0">
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-bold dark:text-gray-100">History</h1>
           <div>

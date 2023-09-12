@@ -1,0 +1,24 @@
+.my-grid {
+  display: grid;
+  /* max-width: 100%; */
+  /* max-height: 100%; */
+  grid-template-columns: min-content minmax(0, 1fr);
+  grid-template-rows: min-content minmax(0, 1fr);
+  gap: 0.25rem;
+}
+
+/* .table-body::-webkit-scrollbar {
+  display: none;
+}
+
+.table-body {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+} */
+
+.table-header-vert {
+
+}
+
+.table-header {
+}
