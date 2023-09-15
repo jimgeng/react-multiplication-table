@@ -1,5 +1,9 @@
+// History panel component
 export default function History({ history }: { history: Set<string> }) {
   let historyArray = [...history];
+
+  // This sort works by parsing the two integers apart of the equation string
+  // and returns the comparison of those integers.
   historyArray.sort((a, b) => {
     const aSplit = a.split(" ");
     const bSplit = b.split(" ");
@@ -19,12 +23,13 @@ export default function History({ history }: { history: Set<string> }) {
       }
     }
   });
+  
   return (
     <ul className="mt-4 overflow-y-auto lg:h-full">
       {historyArray.map((operation) => {
         return (
-          <li>
-            <p className="font-lg dark:text-gray-100">{operation}</p>
+          <li key={operation}>
+            <p className="font-xl dark:text-gray-100">{operation}</p>
           </li>
         );
       })}
