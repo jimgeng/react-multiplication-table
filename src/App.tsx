@@ -29,10 +29,10 @@ function App() {
   return (
     <main className="flex justify-between flex-col h-screen gap-4 bg-gray-200 p-4 dark:bg-gray-800 lg:flex-row">
       <Table size={tableSize} addToOperationHistory={addToOperationHistory} />
-      <div className="h-[45%] lg:h-full flex-grow flex flex-col lg:mt-0 lg:w bg-gray-300 dark:bg-gray-700 py-8 px-12">
-        <div className="flex items-center justify-between">
+      <div className="h-[45%] lg:h-full lg:w-1/2 flex flex-col lg:mt-0 bg-gray-300 dark:bg-gray-700 py-8 px-12">
+        <div className="flex items-baseline justify-between">
           <h1 className="text-3xl font-bold dark:text-gray-100">History</h1>
-          <div>
+          <div className="w-max">
             <p className="mr-4 inline text-xl dark:text-gray-100">Size:</p>
             <input
               type="number"
@@ -40,7 +40,7 @@ function App() {
               id="size"
               value={tableSize === 0 ? "" : tableSize}
               onChange={changeTableSize}
-              className="w-32 appearance-none rounded-md border-2 px-4 py-2 text-lg outline-none transition-all focus:border-solid bg-gray-300 focus:border-emerald-600 dark:border-gray-700 dark:bg-gray-600 dark:text-gray-100"
+              className="lg:w-32 w-16 appearance-none rounded-md border-2 px-4 py-2 text-lg outline-none transition-all focus:border-solid bg-gray-300 focus:border-emerald-600 dark:border-gray-700 dark:bg-gray-600 dark:text-gray-100"
             />
           </div>
         </div>

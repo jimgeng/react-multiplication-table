@@ -70,7 +70,7 @@ export default function Table({ size, addToOperationHistory }: TableProps) {
   // "multi sign " "horiz header"
   // "vert header" "table       " 
   return (
-    <div className="my-grid h-1/2 w-full lg:h-full lg:w-1/2 bg-gray-300 dark:bg-gray-700 p-1">
+    <div className="m-auto my-grid h-1/2 w-full lg:h-full lg:w-1/2 bg-gray-300 dark:bg-gray-700 p-1">
       <div className="">
         <Cell header>×</Cell>
       </div>
