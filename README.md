@@ -1,29 +1,8 @@
 # uas-coding-challenge-2023
 
-- **template of:** vite + react + typescript
-- **tailwindcss:** v3.x
+This is my UBC UAS Coding Challenge 2023 submission. The app uses the vitawind, which has boilerplate code & configurations for a Vite (configured for React) + TailwindCSS project.
 
-## Started
-```bash
-yarn
-# or `npm install`
-```
-
----
-## Develop
-```bash
-yarn dev
-# or `npm run dev`
-```
-
----
-## Build
-```bash
-yarn build
-# or `npm run build`
-```
-
----
+To view the app in development conditions, use `npm run dev`
 <p align="center">
 <img src="./powered-by-vitawind-bright.png">
 </p>

@@ -8,10 +8,13 @@ function App() {
     new Set()
   );
 
+  // operation history is tracked in the global app component, then passed in
+  // as a prop to History.tsx. This function manages it.
   function addToOperationHistory(newOperation: string) {
     setOperationHistory((prev) => new Set(prev.add(newOperation)));
   }
 
+  // React form on chnage fn to handle changing to different table sizes.
   function changeTableSize(event: React.FormEvent<HTMLInputElement>) {
     if (event.currentTarget.value === "") {
       setTableSize(0);
@@ -24,13 +27,11 @@ function App() {
   }
 
   return (
-    <main className="grid h-screen auto-rows-fr gap-4 bg-white p-4 dark:bg-gray-800 lg:grid-cols-2 lg:grid-rows-1">
-      <div className="overflow-auto">
-        <Table size={tableSize} addToOperationHistory={addToOperationHistory} />
-      </div>
-      <div className="mt-4 flex flex-col lg:mt-0">
+    <main className="flex justify-between flex-col h-screen gap-4 bg-gray-200 p-4 dark:bg-gray-800 lg:flex-row">
+      <Table size={tableSize} addToOperationHistory={addToOperationHistory} />
+      <div className="h-[45%] lg:h-full flex-grow flex flex-col lg:mt-0 lg:w bg-gray-300 dark:bg-gray-700 py-8 px-12">
         <div className="flex items-center justify-between">
-          <h1 className="text-xl font-bold dark:text-gray-100">History</h1>
+          <h1 className="text-3xl font-bold dark:text-gray-100">History</h1>
           <div>
             <p className="mr-4 inline text-xl dark:text-gray-100">Size:</p>
             <input
@@ -39,7 +40,7 @@ function App() {
               id="size"
               value={tableSize === 0 ? "" : tableSize}
               onChange={changeTableSize}
-              className="w-32 appearance-none rounded-md border-2 px-4 py-2 text-lg outline-none transition-all focus:border-solid focus:border-emerald-600 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-100 dark:focus:bg-gray-600"
+              className="w-32 appearance-none rounded-md border-2 px-4 py-2 text-lg outline-none transition-all focus:border-solid bg-gray-300 focus:border-emerald-600 dark:border-gray-700 dark:bg-gray-600 dark:text-gray-100"
             />
           </div>
         </div>
